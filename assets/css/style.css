@@ -1,0 +1,17 @@
+body {
+    background-image: url("../images/leopard-background.jpg");
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-image: url("../images/leapardy-title.jpg");
+    
+}
+
+
+
+.container {
+   
+}
