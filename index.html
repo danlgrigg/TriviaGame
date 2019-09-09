@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Trivia Game: Leopardy!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="header"></div> <!--bootstrap header-->
-            <!-- create a display for the question  -->
-        <div class="row">
-            <div class="col-lg-12">
-                    <!-- Start Button -->
-                    <button type="button" class="btn btn-success">Success</button>
-                <div class="card" style="width: 18rem;">
-        <!-- <img src="..." class="card-img-top" alt="..."> -->
-                    <div class="card-body">
-                        <h5 class="card-title question">Question</h5>
-                        <
-            <!-- create buttons for the answer choices -->
-                            <div class="btn-group-vertica">
-                                <button type="button" class="btn btn-warning answer-one">Answer</button>
-                                <button type="button" class="btn btn-warning answer-two">Answer</button>
-                                <button type="button" class="btn btn-warning answer-three">Answer</button>
-                                <button type="button" class="btn btn-warning answer-four">Answer</button> 
-                            </div>    
-                    </div>    
-                </div>
-            </div> 
-        </div>
-            </div>
-        </div>
-    </div>
-    <<script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+      <div class="card title-img">
+        <img
+          src="../TriviaGame/assets/images/leapardy-title.jpg"
+          alt="Leopardy">
+      </div>
+      <div class="jumbotron display-field">
+        <h2>Leopardy!</h2>
+        <button class="btn btn-success">Start Game</button>
+        <button class="btn btn-danger timer"></button>
+        <div class="game"></div>
+      </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/game.js"></script>
-</body>
+  </body>
 </html>

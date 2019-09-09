@@ -1,71 +1,78 @@
+// $(document).ready(function() {
+//   $(".timer").hide()
+//   $(".correct-text").hide()
+//   $(".incorrect-text").hide()
+
+//create interval for timer on key event
+//   function timer() {
+
+// function reset(){ ???
+
+//create variables for timer and score, questions and choices; initial values
+var timer;
+var timerCounter = 10;
+var currentQuestion = 0;
+var currentChoices = 0;
+var correct = 0;
+//   var incorrect = 0;
+//   var unanswered = 0;
 
 //create a start button that hides after the viewer clicks
-//create object of 10 questions and answers and wrong answers 
-var triviaArray = [
-	{question:  "In what country could you encounter a wild leopard?",
-    answerChoices:  ["Bulgaria", "Australia", "India", "The local zoo"],
-    correctChoice:  [2],
-    },
-    
-    {question: "How old is the earliest found fossil of a leopard?",
-    answerChoices: ["500 years ago", "5000 years ago","20,000 years ago", "600,000 years ago"],
-    correctChoice: [3],
-    },
+// $(".start-button").click(function() {
+//   $(this).hide();
+//   $(".timer").show();
+//   timer();
+//   displayTrivia();
+// });
 
-    {question:  "Which feline is the largest?",
-    answer: ["Ocelot", "Leopard", "Siberian Snow Cat", "Lion"],
-    correctChoice: [4],
-    },
+// $(this).show()
+//     $(".timer").text(timerCounter);
+//     timer = setInterval(function() {
 
-    {question:  "The etymology of Leopard derives from: ", 
-    answer: ["Old English, leo- 'lion' and pard 'part'", "Old French, leo-'lion' pard-'spotted'", "Yo Mama", "Oxford Dictionary leo-'lion' pard-'party'"],
-    correctChoice: [0],
+//       timerCounter--;
+//       $(".timer").text(timerCounter);
 
-    }];
+//       if (timerCounter <= 0) {
+//           alert("Time is UP!!");
+//           incorrectChoice++;
+//         currentQuestion++;
+//         clearInterval(timer);
+//         displayTrivia();
+//         timer = 10;
+//         return;
+//       }
+//     }, 1000);
 
-var timerCounter = 30;
-var correctChoice = 0;
-var incorrectChoice = 0;
-var unanswered = 0;
+// $(".game").html("<h4>" + choices + "<h4>");
+// $(".question-text").text(triviaArray[currentQuestion].question);
+// console.log(triviaArray[currentChoices]);
+// $(".choices-text").text(triviaArray[currentChoices].choices);
 
-$("#start-button").click(function(){
-    $(this).hide();
-    timeCounter = setInterval(timerCounter, 1000); 
-    displayTrivia();
-    }); 
-
-function timer(){
-    timerCounter--;
-    if (timerCounter <= 0) {
-        clearInterval(timeCounter);
-        return;
-        
-    }
-
+//create function to display question and choices
 function displayTrivia() {
-    $("#question_div").html(triviaArray[0].question);
-        question++;
-    
-        var choicesArr = triviaArray[0].choices;
-        var buttonsArr = [];
-    
-        for (let i = 0; i < choicesArr.length; i++) {
-        var button = $('<button>');
-        button.text(choicesArr[i]);
-        button.attr('data-id', i);
-        $('#choices_div').append(button);
-        }
-    
-        } 
+  timerCounter = 10;
+  timer = setInterval(decrement, 1000);
+  var question = triviaArray[currentQuestion].question;
+  var choices = triviaArray[currentQuestion].choices;
 
+  $(".timer").html("Timer: " + timerCounter);
+  $(".game").html(`
+        <h4>${question}</h4>
+        ${displayChoices(choices)}
+        `);
+}
 
+function displayChoices(choices) {
+  let result = "";
+  for (let i = 0; i < choices.length; i++) {
+    result += `<div class="btn btn-dark choice" data-answer="${choices[i]}">${choices[i]}</div>`;
+  }
+  return result;
+}
+displayTrivia();
 
-
-
-//create interval for display clock on key event
-//create variables for 
-//create score counter for correct incorrect; 1 out of 10
-//create random event to pick question from array 
 //set conditions for correct incorrect answers
+
 //create end page to display correct/incorrect/unanswered? Hide/appear function?
 //create a reset game function
+// });

@@ -1,17 +1,25 @@
 body {
     background-image: url("../images/leopard-background.jpg");
-    display: flex;
-}
-
-.header {
-    width: 100%;
-    height: auto;
-    background-image: url("../images/leapardy-title.jpg");
     
 }
 
-
-
-.container {
-   
+.title-img {
+    background-image: url("../images/leapardy-title.jpg");
+    height: 30rem;
+    opacity: .8;
+    
 }
+
+.display-field {
+    background-color: gold;
+    /* opacity: .6; */
+}
+
+.btn .timer .game {
+    opacity: 1;
+}
+
+.choice {
+    margin: 1rem;
+}
+
