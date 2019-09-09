@@ -6,17 +6,18 @@ body {
 .title-img {
     background-image: url("../images/leapardy-title.jpg");
     height: 30rem;
-    opacity: .5;
+    opacity: .8;
     
 }
 
 .display-field {
     background-color: gold;
-    /* opacity: .6; */
+    /* opacity: .8; */
 }
 
-.btn .timer .game {
+.btn .timer-text .game-text {
     opacity: 1;
+    margin: 1rem;
 }
 
 .choice {

@@ -21,13 +21,23 @@ var triviaArray = [
     answer: "Lion"
   },
   {
+    question: "What species was Sher Khan from 'The Jungle Book'?",
+    choices: ["Jaguar", "Leopard", "Tiger", "Panther"],
+    answer: "Tiger"
+  },
+  {
+    question: "Which leopards have a different appearance due to a genetic variation?",
+    choices: ["Albino Leopard", "Albino Ocelot", "Cougar", "Black Panther"],
+    answer: "Black Panther"
+  },
+  {
     question: "The etymology of Leopard derives from: ",
     choices: [
-      "Old English, leo- 'lion' and pard 'part'",
-      "Old French, leo-'lion' pard-'spotted'",
+      "Old English, leo- 'lion' and pard- 'part'",
+      "Old French, leo- 'lion' pard- 'spotted'",
       "Those 'Word' thingies",
-      "Oxford Dictionary leo-'lion' pard-'party'"
+      "Oxford Dictionary leo- 'lion' pard- 'party'"
     ],
-    answer: "Old English, leo- 'lion' and pard 'part'"
+    answer: "Old English, leo- 'lion' and pard- 'part'"
   }
 ];
